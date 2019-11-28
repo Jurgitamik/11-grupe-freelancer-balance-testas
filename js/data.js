@@ -14,26 +14,20 @@ const account = [
 ];
 
 const months = [
-    'Sausis', 
-    'Vasaris', 
-    'Kovas', 
-    'Balandis',
-    'Gegužė',
-    'Birželis',
-    'Liepa',
-    'Rugpjūtis',
-    'Rugsėjis',
-    'Spalis',
-    'Lapkritis',
-    'Gruodis'
+    {month: 'Sausis'}, 
+    {month: 'Vasaris'}, 
+    {month: 'Kovas'}, 
+    {month: 'Balandis'},
+    {month: 'Gegužė'},
+    {month: 'Birželis'},
+    {month: 'Liepa'},
+    {month: 'Rugpjūtis'},
+    {month: 'Rugsėjis'},
+    {month: 'Spalis'},
+    {month: 'Lapkritis'},
+    {month: 'Gruodis'}
 ];
 
-const list = [
-    {
-        number: '1',
-        name: 'Sausis',
-        income: '200.00 Eur',
-        expence: '50.00 Eur',
-        balance: suma
-    }
-]
+const number = [
+    
+];
