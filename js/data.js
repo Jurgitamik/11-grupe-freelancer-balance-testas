@@ -14,18 +14,18 @@ const account = [
 ];
 
 const months = [
-    {month: 'Sausis'}, 
-    {month: 'Vasaris'}, 
-    {month: 'Kovas'}, 
-    {month: 'Balandis'},
-    {month: 'Gegužė'},
-    {month: 'Birželis'},
-    {month: 'Liepa'},
-    {month: 'Rugpjūtis'},
-    {month: 'Rugsėjis'},
-    {month: 'Spalis'},
-    {month: 'Lapkritis'},
-    {month: 'Gruodis'}
+    {men: 'Sausis'}, 
+    {men: 'Vasaris'}, 
+    {men: 'Kovas'}, 
+    {men: 'Balandis'},
+    {men: 'Gegužė'},
+    {men: 'Birželis'},
+    {men: 'Liepa'},
+    {men: 'Rugpjūtis'},
+    {men: 'Rugsėjis'},
+    {men: 'Spalis'},
+    {men: 'Lapkritis'},
+    {men: 'Gruodis'}
 ];
 
 const number = [
