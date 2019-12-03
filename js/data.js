@@ -27,7 +27,3 @@ const months = [
     {men: 'Lapkritis'},
     {men: 'Gruodis'}
 ];
-
-const number = [
-    
-];
