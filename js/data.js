@@ -1,4 +1,4 @@
-const account = [
+const accounts = [
     { month: 10, income: 150 },
     { month: 1, income: 200, expense: 50 },
     { month: 3, income: 450, expense: 200 },
@@ -13,17 +13,5 @@ const account = [
     { month: 12, expense: 200 }
 ];
 
-const months = [
-    {men: 'Sausis'}, 
-    {men: 'Vasaris'}, 
-    {men: 'Kovas'}, 
-    {men: 'Balandis'},
-    {men: 'Gegužė'},
-    {men: 'Birželis'},
-    {men: 'Liepa'},
-    {men: 'Rugpjūtis'},
-    {men: 'Rugsėjis'},
-    {men: 'Spalis'},
-    {men: 'Lapkritis'},
-    {men: 'Gruodis'}
-];
+const months = [ 'Sausis', 'Vasaris', 'Kovas', 'Balandis', 'Gegužė', 'Birželis', 'Liepa', 'Rugpjūtis', 'Rugsėjis', 'Spalis', 'Lapkritis', 'Gruodis' ];
+

@@ -1,3 +1,1 @@
-// renderAccount(  );
-
-renderMonths( list );
+renderRow( months, accounts );
