@@ -1,20 +1,8 @@
 function renderRow ( months, accounts ) {
    let HTML = '';
 
-//    let number = accounts[0].month;
-   
-//    for (let i=0; i<accounts.length; i++) {
-//        if ( accounts.month[i] < 1 ) {
-//         accounts.month[i] = account.month[0];
-//        }
-//        console.log(accounts.month[i]);
-       
-//    }
-
-//    let balance[j] = accounts[j].income - accounts[j].expense;
-
-
    for ( let i=0; i<accounts.length; i++) {
+       
     if ( !accounts[i].income ) {
         accounts[i].income = '0';
     }
@@ -30,10 +18,37 @@ function renderRow ( months, accounts ) {
                     <div class="cell">${months[i]}</div>
                     <div class="cell">${accounts[i].income + '.00 Eur'}</div>
                     <div class="cell">${accounts[i].expense + '.00 Eur'}</div>
-                    <div class="cell">${accounts[i].balance + '.00 Eur'}</div>
+                    <div class="cell">${(accounts[i].income - accounts[i].expense) + '.00 Eur'}</div>
                 </div>`;
    
     }
 
     return document.getElementById('accounts').innerHTML = HTML;
+}
+
+function renderFooter ( accounts ) {
+    let HTML = '';
+    let sumaIncome = 0;
+    let sumaExpense = 0;
+    let sumaBalance = 0;
+
+    
+    // for ( let i=0; i<accounts.length; i++) {
+    //     sumaIncome = sumaIncome + accounts[i].income;
+    //     // if ( accounts[i].income = '0') {
+    //     //     i++;
+    //     // }
+        
+    //     console.log(sumaIncome);
+        
+
+        HTML += `<div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell">sumaIncome + '.00 Eur'</div>
+                <div class="cell">sumaExpense + '.00 Eur'}</div>
+                <div class="cell">sumaBalance + '.00 Eur'}</div>`;
+    
+   
+
+    return document.getElementById('footer').innerHTML = HTML;
 }
