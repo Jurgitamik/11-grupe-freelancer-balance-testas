@@ -1,5 +1,16 @@
 function renderRow ( months, accounts ) {
    let HTML = '';
+
+//    let number = accounts[0].month;
+   
+//    for (let i=0; i<accounts.length; i++) {
+//        if ( accounts.month[i] < 1 ) {
+//         accounts.month[i] = account.month[0];
+//        }
+//        console.log(accounts.month[i]);
+       
+//    }
+
 //    let balance[j] = accounts[j].income - accounts[j].expense;
 
 
@@ -14,8 +25,6 @@ function renderRow ( months, accounts ) {
         accounts[i].balance = '0';
     }
 
-          
- 
         HTML += `<div class="table-row">
                     <div class="cell">${accounts[i].month}</div>
                     <div class="cell">${months[i]}</div>
