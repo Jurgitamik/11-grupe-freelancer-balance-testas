@@ -26,29 +26,49 @@ function renderRow ( months, accounts ) {
     return document.getElementById('accounts').innerHTML = HTML;
 }
 
-function renderFooter ( accounts ) {
+function summFooter ( accounts ) {
+
+
     let HTML = '';
     let sumaIncome = 0;
     let sumaExpense = 0;
     let sumaBalance = 0;
+    let i = 0;
+
+    if ( !accounts[i].income ) {
+        i++;
+    } else {
 
     
-    // for ( let i=0; i<accounts.length; i++) {
-    //     sumaIncome = sumaIncome + accounts[i].income;
-    //     // if ( accounts[i].income = '0') {
-    //     //     i++;
-    //     // }
-        
-    //     console.log(sumaIncome);
-        
+    for ( let i=0; i<accounts.length; i++) {
+
+        // if (accounts[i].income = 0) {
+        //     i++;
+        // }
+        // if ( !accounts[i].income ) {
+        //     accounts[i].income = 0;
+        // }
+        sumaIncome += accounts[i].income;
+        console.log(sumaIncome); 
+        // if (!accounts[i].income) {
+        //     i++;    
+        // }
+
+    }   
+}
+    console.log(sumaIncome); 
 
         HTML += `<div class="cell"></div>
                 <div class="cell"></div>
-                <div class="cell">sumaIncome + '.00 Eur'</div>
-                <div class="cell">sumaExpense + '.00 Eur'}</div>
-                <div class="cell">sumaBalance + '.00 Eur'}</div>`;
+                <div class="cell">${sumaIncome + '.00 Eur'}</div>
+                <div class="cell">${sumaExpense + '.00 Eur'}</div>
+                <div class="cell">${sumaBalance + '.00 Eur'}</div>`;
     
-   
+ 
 
     return document.getElementById('footer').innerHTML = HTML;
-}
+    }
+
+  
+
+    

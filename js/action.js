@@ -1,2 +1,2 @@
 renderRow( months, accounts );
-renderFooter( accounts );
+summFooter( accounts );
