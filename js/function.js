@@ -19,10 +19,8 @@ function renderRow ( months, accounts ) {
                     <div class="cell">${accounts[i].income + '.00 Eur'}</div>
                     <div class="cell">${accounts[i].expense + '.00 Eur'}</div>
                     <div class="cell">${(accounts[i].income - accounts[i].expense) + '.00 Eur'}</div>
-                </div>`;
-   
+                </div>`;  
     }
-
     return document.getElementById('accounts').innerHTML = HTML;
 }
 
@@ -32,17 +30,12 @@ function summFooter ( accounts ) {
     let sumaExpense = 0;
     let sumaBalance = 0;
     let i = 0;
-
-    if ( !accounts[i].income ) {
-        i++;
-    } else {
     
     for ( let i=0; i<accounts.length; i++) {
         sumaIncome += accounts[i].income;
         sumaExpense += accounts[i].expense;
         sumaBalance = accounts[i].income - accounts[i].expense;
     }   
-}
 
         HTML += `<div class="cell"></div>
                 <div class="cell"></div>
@@ -51,7 +44,10 @@ function summFooter ( accounts ) {
                 <div class="cell">${sumaBalance + '.00 Eur'}</div>`;
     
     return document.getElementById('footer').innerHTML = HTML;
-    }
+}
+
+// Suvestine
+
 
   
 
