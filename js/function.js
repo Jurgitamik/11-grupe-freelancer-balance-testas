@@ -4,13 +4,13 @@ function renderRow ( months, accounts ) {
    for ( let i=0; i<accounts.length; i++) {
        
     if ( !accounts[i].income ) {
-        accounts[i].income = '0';
+        accounts[i].income = 0;
     }
     if ( !accounts[i].expense ) {
-        accounts[i].expense = '0';
+        accounts[i].expense = 0;
     } 
     if ( !accounts[i].balance ) {
-        accounts[i].balance = '0';
+        accounts[i].balance = 0;
     }
 
         HTML += `<div class="table-row">
@@ -27,8 +27,6 @@ function renderRow ( months, accounts ) {
 }
 
 function summFooter ( accounts ) {
-
-
     let HTML = '';
     let sumaIncome = 0;
     let sumaExpense = 0;
@@ -38,25 +36,13 @@ function summFooter ( accounts ) {
     if ( !accounts[i].income ) {
         i++;
     } else {
-
     
     for ( let i=0; i<accounts.length; i++) {
-
-        // if (accounts[i].income = 0) {
-        //     i++;
-        // }
-        // if ( !accounts[i].income ) {
-        //     accounts[i].income = 0;
-        // }
         sumaIncome += accounts[i].income;
-        console.log(sumaIncome); 
-        // if (!accounts[i].income) {
-        //     i++;    
-        // }
-
+        sumaExpense += accounts[i].expense;
+        sumaBalance = accounts[i].income - accounts[i].expense;
     }   
 }
-    console.log(sumaIncome); 
 
         HTML += `<div class="cell"></div>
                 <div class="cell"></div>
@@ -64,8 +50,6 @@ function summFooter ( accounts ) {
                 <div class="cell">${sumaExpense + '.00 Eur'}</div>
                 <div class="cell">${sumaBalance + '.00 Eur'}</div>`;
     
- 
-
     return document.getElementById('footer').innerHTML = HTML;
     }
 
